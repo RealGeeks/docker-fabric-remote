@@ -6,6 +6,7 @@ ENV FABFILE_PATH "/data/fabfile.py"
 
 WORKDIR /root/
 RUN ["mkdir", "/root/.ssh"]
+RUN  echo "    IdentityFile /root/.ssh/id_rsa" >> /etc/ssh/ssh_config
 ADD start.sh /root/
 
 CMD ["./start.sh"]
