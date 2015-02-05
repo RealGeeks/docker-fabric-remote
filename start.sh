@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "$SSH_KEY" > /root/.ssh/id_rsa
+echo -e "$SSH_KEY" > /root/.ssh/id_rsa
 chmod 0600 /root/.ssh/id_rsa
 
 ssh-add /root/.ssh/id_rsa
