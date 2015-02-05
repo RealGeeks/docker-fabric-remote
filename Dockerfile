@@ -3,7 +3,7 @@ FROM python:2.7
 RUN pip install pyyaml requests fabric_remote
 
 ENV FABFILE_PATH "/data/fabfile.py"
-ENV HOME "/root"
+ENV HOME /root
 
 WORKDIR /root/
 RUN ["mkdir", "/.ssh"]
