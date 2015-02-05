@@ -5,8 +5,8 @@ RUN pip install pyyaml requests fabric_remote
 ENV FABFILE_PATH "/data/fabfile.py"
 
 WORKDIR /root/
-RUN ["mkdir", "/root/.ssh"]
-RUN  echo "    IdentityFile /root/.ssh/id_rsa" >> /etc/ssh/ssh_config
+RUN ["mkdir", "/.ssh"]
+RUN  echo "    IdentityFile /.ssh/id_rsa" >> /etc/ssh/ssh_config
 ADD start.sh /root/
 
 CMD ["./start.sh"]
