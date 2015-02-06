@@ -1,6 +1,6 @@
 FROM python:2.7
 
-RUN pip install pyyaml requests fabric_remote
+RUN pip install pyyaml requests fabric_remote git+https://github.com/a2design-company/hipster
 
 ENV FABFILE_PATH "/data/fabfile.py"
 ENV HOME /root
